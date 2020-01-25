@@ -1,0 +1,29 @@
+
+
+.row{
+   
+  
+    background-color:rgb(218, 220, 221);
+    width: 100%;
+    padding-top: 20px;
+    font-family: auto;
+    /* height: 80%; */
+    position: relative;
+    
+
+
+}
+.col-sm-3{
+    margin-left:100px;
+    max-width: 15%;
+}
+.navbar-brand{
+    font-size: 1em;
+    color: blue;
+}
+i{
+    font-size:20px;
+}
+img{
+    height: 41px;
+}

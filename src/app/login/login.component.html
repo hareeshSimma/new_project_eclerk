@@ -1,0 +1,49 @@
+<body>
+  <div class="container-fluid">
+  <h3>Login</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group centered">
+      <i class="fa fa-envelope icon"> </i>
+      <input type="text" formControlName="email" [(ngModel)]="email" class="form-control" placeholder="Email"    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Email is required</div>
+          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+      </div> 
+    </div>
+
+    <div class="form-group centered">
+      <i class="fa fa-lock icon"> </i>
+        <input type="password" formControlName="password" #passwordfield [(ngModel)]="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <i (click)="passwordfield.type=passwordfield.type=='password'?'text':'password'"
+        class="fa fa-fw field-icon toggle-password"
+        [ngClass]="(passwordfield.type=='password')?' fa-eye':' fa-eye-slash'" style="    margin-left: 216px;
+        margin-top: -26px;"></i>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+        </div>
+
+    <a href="#/forgotpassword" style="display: block; text-align: center;">Forgot Password?</a>
+
+    <div class="  text-center">
+      <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    <div class="  text-center">
+      <button type="button" class="btn1" (click)="authService.SigninWithGoogle()"><img
+          src="assets/images/download (1).png" class="googleicon">
+        <span class="large-button__text " style="margin-left: -89px;color:white">Sign in with Google</span>
+      </button>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn2" (click)="authService.phoneLogin()"><img
+          src="assets/images/smartphone-call (1).png" class="googleicon">
+        <span class="large-button__text " style="margin-left: -89px;color:white">Sign in with Phone</span>
+      </button>
+    </div>
+  </form>
+  <span style="display: block; text-align: center;">Don't have a eclerk account yet?<a routerLink="/signup"
+      style=" margin-left: 6px;">Signup</a>
+  </span>
+</div>
+</body>

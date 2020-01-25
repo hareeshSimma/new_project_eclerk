@@ -1,0 +1,94 @@
+<nav class="navbar navbar-nav navbar-fixed-top navbar-expand-sm bg-primay navbar-dark">
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="menu-active"><img src="assets/images/logo.png"></a>
+    <ul class="nav navbar-nav">
+        <!-- <img src="assets\images\user (6).png" class="user"> -->
+        <li class="nav-item dropdown">
+            <div ngbDropdown class="d-inline-block">
+
+                <button class="btn" id="dropdownMenu1" ngbDropdownToggle>{{this.email}}</button>
+                <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <button class="dropdown-item" routerLink="/profile"
+                        routerLinkActive="dashboard-active">profile</button>
+                        
+                    <button class="dropdown-item" routerLink="/changepassword"
+                        routerLinkActive="dashboard-active">ChangePassword</button>
+                        <button class="dropdown-item" (click)="delete()">DeleteAccount</button>
+                    <button class="dropdown-item" (click)="logOut()">Logout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a routerLink="accounts" class="nav-link" routerLinkActive="active"><img
+                            src="./assets/images/data-analysis.png"><span>Accounts</span></a>
+                            
+                </li>
+               
+                <li class="nav-item">
+                    <a routerLink="contacts" class="nav-link" routerLinkActive="active"><img
+                            src="./assets/images/phone-book.png"><span>Contacts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="activity" class="nav-link" routerLinkActive="active"><img
+                            src="./assets/images/analytics.png"><span>Activity</span></a>
+                           
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="container">
+            <div class="col-xs-11 sm-11 md-11 lg-11 offset-3">
+            <header>
+               <div class="row1">
+              <div class="header">
+                 <h3 class="float-left" style="padding-left: 10px;"> Dashboard</h3>
+                  <div class="input-group">
+                 <input class="form-control border rounded-pill-left" type="search" value="search" id="example-search-input" sttyle=" margin-top: 10px;">
+               </div>
+                    <button type="button" class="btn btn-rounded float-right" style="padding-right: 20px;  background-color: #1289A7; text-align: center;    margin-top: -40px;
+                    width: 150px;" data-toggle="modal" data-target="#exampleModal">Add Account</button>
+                   
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Add Account</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body pull-right">
+                 
+                 <input type="text" class="form-control" value="Account Type" name="AccountType">
+                 <input type="text" class="form-control" value="Enter AccountType" name="AccountType">
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btnn btn-secondary" data-dismiss="modal">Save</button>
+                 
+               </div>
+             </div>
+           </div>
+          </div>
+             </div>
+          </div>
+          </header>
+          
+          <div class="row2">
+          <div class="flex">
+          <div class="flex-items">Flex item 1</div>
+             <div class="flex-items">Flex item 2</div>
+             <div class="flex-items">Flex item 3</div>
+          
+          </div>
+          
+          
+          </div>
+          </div>
+          </div> -->
+
+    </div>  
+</div>

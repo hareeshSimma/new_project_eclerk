@@ -1,0 +1,56 @@
+<body>
+<h3>Signup</h3>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="form-group centered">
+        <i class="fa fa-user icon" aria-hidden="true"> </i>
+        <input type="text" formControlName="fullname" class="form-control"  placeholder="Full Name"   [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
+        <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+            <div *ngIf="f.fullname.errors.required">Full Name is required</div>
+        </div>
+    </div>
+
+    <div class="form-group centered">
+        <i class="fa fa-envelope icon"> </i>
+        <input type="text" formControlName="email" [(ngModel)]="email" class="form-control" placeholder="Email"    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div> 
+    </div>
+
+    <div class="form-group centered">
+        <i class="fa fa-lock icon"></i>
+        <input type="password" formControlName="password" #passwordfield [(ngModel)]="password"  class="form-control" placeholder="Password"    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <i (click)="passwordfield.type=passwordfield.type=='password'?'text':'password'"
+        class="fa fa-fw field-icon toggle-password"
+        [ngClass]="(passwordfield.type=='password')?' fa-eye':' fa-eye-slash'" style="       margin-left: 195px;
+        margin-top: -26px;"></i>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    
+    </div>
+    <div  class="  text-center">
+        <button  type="submit" class="btn btn-primary mr-1">Signup</button>
+    </div>
+    <div  class="  text-center">
+
+    <button type="button" class="btn1" (click)="authService.SigninWithGoogle()"><img
+            src="assets/images/download (1).png" class="googleicon">
+        <span class="large-button__text " style="color:white;margin-left: -89px;">Signup with Google</span>
+    </button>
+</div>
+<div class="text-center">
+    <button type="button" class="btn2" (click)="authService.mobileAuth()" class="btn1"><img
+            src="assets/images/smartphone-call (1).png" class="googleicon">
+        <span class="large-button__text " style="color:white;margin-left: -89px;"> Signup with Phone</span>
+    </button>
+</div>
+</form>
+
+<span style="display: block; text-align: center;"> By singning up your indicating to read our<a class="a2" routerLink="/termsofuse">
+        Terms of uses
+    </a>and<a class="a2" routerLink="/termsofuse"> Privacy policy</a></span>
+<p><span  style="display: block; text-align: center;">Already have an account?<a routerLink="/login" style=" margin-left: 6px;">Login</a></span></p>
+</body>

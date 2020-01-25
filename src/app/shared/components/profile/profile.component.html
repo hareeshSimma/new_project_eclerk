@@ -1,0 +1,63 @@
+<nav class="navbar navbar-nav navbar-fixed-top navbar-expand-sm bg-primay navbar-dark">
+    <img src="assets/images/logo.png">
+        <ul class="nav navbar-nav">
+            <!-- <img src="assets\images\user (6).png" class="user"> -->
+            <li class="nav-item dropdown">
+                <div ngbDropdown class="d-inline-block">
+    
+                    <button class="btn" id="dropdownMenu1" ngbDropdownToggle>{{this.email}}</button>
+                    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <button class="dropdown-item" routerLink="/profile"
+                            routerLinkActive="dashboard-active">profile</button>
+                            
+                        <button class="dropdown-item" routerLink="/changepassword"
+                            routerLinkActive="dashboard-active">ChangePassword</button>
+                            <button class="dropdown-item" (click)="delete()">DeleteAccount</button>
+                        <button class="dropdown-item" (click)="logout()">Logout</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+</nav>
+
+<div class="container">
+        <div class="row">
+    
+            <div class="col-md">
+                <img src="assets/images/download.jpg" alt="Avatar" class="avatar">
+    
+                <div style="    margin-left: 109px;">Change Photo</div>
+    
+                <div *ngIf="currentUpload">
+                </div>
+
+                    <label>
+                        <input type="file" (change)="detectFiles($event)" style="    margin-left: 59px;">
+                    </label>
+                    <button [disabled]="!selectedFiles" (click)="uploadSingle()" style="margin-left: -78px;
+                    background-color: cornflowerblue;
+                    border-radius: 18px;"> Upload
+                     </button>
+        
+            </div>
+                <div class="col-md">{{this.fullname}}</div>
+                <div class="col-md">email</div>
+                <!-- <div class="col-md">phoneNumber</div> -->
+                </div>
+                </div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Your Account</h3>
+            <img src="assets/images/download.jpg" alt="Avatar" class="avatar">
+            <span>Your Name</span>
+                 <div>Your email</div>
+                <div>Your phone Number</div>
+                <div>Your password</div></span>
+            <div>Change your avatar</div>
+             <h6>No file chosen</h6>
+        </div>
+        <div class="col-sm-6">
+    </div>
+</div> -->

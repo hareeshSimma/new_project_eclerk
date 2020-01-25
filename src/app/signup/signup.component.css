@@ -1,0 +1,167 @@
+body{
+  background-image: url('/assets/images/webbackgroundimage.png ');
+  
+}
+.centered{
+ 
+  margin-left: 40%;
+
+}
+input{
+    border: 3px solid #707070;
+    border-radius: 16px;
+    padding-left: 30px;
+    width: 265px;   
+}
+i{ 
+  padding-left: 36px;
+  margin-top: 10px;
+  position: absolute;
+} 
+.invalid-feedback{
+  margin-left: 1%;
+}
+h3{
+  position: relative ;
+  text-align: center;
+  margin-top:10px;
+  font-family: serif;
+}
+
+.btn{
+ 
+  width: 238px;
+  height: 40px;
+  background: #426986 0% 0% no-repeat padding-box;
+  border-radius: 35px;
+ margin-bottom: 10px;
+  color:white;
+ 
+}
+.btn1,.btn2{
+ 
+width: 290px;
+height: 40px;
+background: #426986 0% 0% no-repeat padding-box;
+border-radius: 35px;
+margin-bottom: 10px;
+}
+
+.googleicon{
+  height: 31px;
+  margin-right: 98px;
+}
+.fa{
+  margin-left: -24px;
+}
+
+.anchor{
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+    .loginform { width: 680px; left: 25%; }
+}
+
+@media only screen and (min-width: 768px) {
+    .loginform { width: 25%; left: 50%; }
+} 
+
+
+@media only screen and (min-width: 992px) {
+  .loginform { width: 50%; left: 75%; }
+} 
+
+@media only screen and (min-width: 1200px) {
+.loginform { width: 75%; left: 100%; }
+  
+} 
+
+/* body{
+  background-image: url('/assets/images/webbackgroundimage.png ');
+  
+}
+.signupform{
+  width: 100%;
+  font-family: auto;
+  margin-bottom: 0px;
+  text-align: center;
+  position: fixed;
+}
+
+h3{
+  position: absolute ;
+  text-align: center;
+  margin-top:10px;
+  font-family: serif;
+}
+input{
+  border: 3px solid #707070;
+    border-radius: 16px;
+    padding-left: 30px;
+    width: 265px;
+
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-icons i { 
+    padding: 15px;
+    color: black;
+    font: Regular 28px/34px Roboto;
+    text-align: center;
+    margin-left: -113px;
+    margin-top: 0px;
+} 
+
+
+.btn{
+ 
+  width: 238px;
+  height: 40px;
+  background: #426986 0% 0% no-repeat padding-box;
+  border-radius: 35px;
+ margin-bottom: 10px;
+  color:white;
+ 
+}
+.btn1,.btn2{
+ 
+width: 290px;
+height: 40px;
+background: #426986 0% 0% no-repeat padding-box;
+border-radius: 35px;
+margin-bottom: 10px;
+}
+
+.googleicon{
+  height: 31px;
+  margin-right: 98px;
+}
+.fa{
+  margin-left: -24px;
+}
+
+.anchor{
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+    .loginform { width: 680px; left: 25%; }
+}
+
+@media only screen and (min-width: 768px) {
+    .loginform { width: 25%; left: 50%; }
+} 
+
+
+@media only screen and (min-width: 992px) {
+  .loginform { width: 50%; left: 75%; }
+} 
+
+@media only screen and (min-width: 1200px) {
+.loginform { width: 75%; left: 100%; }
+  
+} 
+
+ */

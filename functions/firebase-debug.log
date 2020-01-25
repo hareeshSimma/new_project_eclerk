@@ -1,0 +1,45 @@
+[debug] [2019-10-29T07:27:50.200Z] ----------------------------------------------------------------------
+[debug] [2019-10-29T07:27:50.200Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Swathi Jain\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-10-29T07:27:50.200Z] CLI Version:   7.6.1
+[debug] [2019-10-29T07:27:50.200Z] Platform:      win32
+[debug] [2019-10-29T07:27:50.200Z] Node Version:  v10.16.3
+[debug] [2019-10-29T07:27:50.200Z] Time:          Tue Oct 29 2019 12:57:50 GMT+0530 (India Standard Time)
+[debug] [2019-10-29T07:27:50.200Z] ----------------------------------------------------------------------
+[debug] [2019-10-29T07:27:50.200Z] 
+[debug] [2019-10-29T07:27:50.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-29T07:27:50.267Z] > authorizing via signed-in user
+[debug] [2019-10-29T07:27:50.267Z] [iam] checking project fir-e01e7 for permissions ["firebase.projects.get"]
+[debug] [2019-10-29T07:27:50.267Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-29T07:27:50.267Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-29T07:27:50.893Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-29T07:27:50.941Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-e01e7:testIamPermissions  
+
+[debug] [2019-10-29T07:27:52.894Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-29T07:27:52.894Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fir-e01e7  
+ 
+[debug] [2019-10-29T07:27:54.270Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Swathi Jain\Downloads\Demo\functions" for Cloud Functions...
+[debug] [2019-10-29T07:27:58.512Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions","node_version":"10.16.3"}
+[debug] [2019-10-29T07:27:58.512Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-29T07:27:58.528Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-29T07:27:58.544Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T07:27:58.548Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[helloWorld]: http function initialized (http://localhost:5000/fir-e01e7/us-central1/helloWorld).
+[debug] [2019-10-29T07:30:00.457Z] Accepted request GET /fir-e01e7/us-central1/helloWorld --> helloWorld
+[debug] [2019-10-29T07:30:02.413Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "helloWorld"
+[debug] [2019-10-29T07:30:02.417Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-29T07:30:02.429Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-29T07:30:02.441Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T07:30:02.445Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T07:30:02.769Z] [runtime-status] Trigger "helloWorld" has been found, beginning invocation! {}
+[debug] [2019-10-29T07:30:02.769Z] [runtime-status]  {"httpsTrigger":{},"name":"helloWorld","entryPoint":"helloWorld"}
+[debug] [2019-10-29T07:30:02.769Z] [runtime-status] Running helloWorld in mode HTTPS {}
+[debug] [2019-10-29T07:30:02.793Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\1328"}
+[debug] [2019-10-29T07:30:02.797Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Swathi Jain\\Downloads\\Demo\\functions\\1328"}
+[debug] [2019-10-29T07:30:02.837Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-29T07:30:02.861Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "helloWorld" in ~1s
